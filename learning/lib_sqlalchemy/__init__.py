@@ -1,3 +1,11 @@
 from sqlalchemy import create_engine
 
-engine = create_engine("mysql+pymysql://minh:password@localhost:3306/python_learning", echo=True, future=True)
+from .configs import Config
+
+c = Config()
+
+engine = create_engine(
+    f"{c.DB_ENGINE}://{c.DB_USER}:{c.DB_PASSWORD}@{c.DB_HOST}:{c.DB_PORT or 3306}/{c.DB_NAME}",
+    echo=True,
+    future=True
+)
