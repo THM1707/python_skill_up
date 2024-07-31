@@ -1,0 +1,23 @@
+""" Idea specific settings ------------------
+source ~/.vimrc
+set idearefactormode=keep
+set ideajoin
+set incsearch
+set
+map Q gq
+
+
+"------------------- IDE --------------------
+map \r <Action>(Run)
+map \R <Action>(RunClass)
+map \i <Action>(OptimizeImports)
+map \d <Action>(Debug)
+map \D <Action>(DebugClass)
+map <leader>b <Action>(ToggleLineBreakpoint)
+nnoremap <CR> o
+
+"------------------- Plugins --------------------
+Plug 'machakann/vim-highlightedyank' " Highlight copied text
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'michaeljsmith/vim-indent-object'
